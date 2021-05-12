@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources tools:keep="@string/firebase_database_url,@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_web_client_id,@string/admob_app_id" xmlns:tools="http://schemas.android.com/tools">
+  <string name="google_crash_reporting_api_key" translatable="false">
+  </string>
+  <string name="default_web_client_id" translatable="false">
+  </string>
+  <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+  <string name="firebase_database_url" translatable="false">https://shmulikfbtest.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">476820288095</string>
+  <string name="google_storage_bucket" translatable="false">cl-half-pipe-runner.appspot.com</string>
+  <string name="project_id" translatable="false">cl-half-pipe-runner</string>
+  <string name="google_api_key" translatable="false">AIzaSyCyIAUhkmG6WuHzy5LZItObwGGSfEPUJx0</string>
+  <string name="google_app_id" translatable="false">1:476820288095:android:993c6033608ff5a224a1ea</string>
+  <string name="client_id" translatable="false">476820288095-nkjgadlorsagvj6s8gk7hgeqsglf3pbo.apps.googleusercontent.com</string>
+</resources>

@@ -2,8 +2,40 @@
 
 apply plugin: 'com.android.application'
 
+repositories {
+        google()
+        jcenter()
+        flatDir {
+            dirs 'libs'
+        }
+        maven {
+            url 'https://s3.amazonaws.com/com.tabtale.repo/android/maven/ttplugins'
+        }
+        maven {
+            url 'https://s3.amazonaws.com/com.tabtale.repo/android/maven/thirdparty'
+        }
+        maven {
+            url 'http://deltadna.bintray.com/android'
+        }
+        maven {
+            url "https://dl.bintray.com/ironsource-mobile/android-sdk"
+        }
+        maven {
+            url "https://adcolony.bintray.com/AdColony"
+        }
+        maven { url "https://s3.amazonaws.com/moat-sdk-builds" }
+        maven { url "https://chartboostmobile.bintray.com/Chartboost" }
+        maven {
+            url 'https://maven.ogury.co'
+        }
+        maven {
+            url  "https://dl.bintray.com/mintegral-official/mintegral_ad_sdk_android_for_oversea"
+        }
+    }
+
 dependencies {
     implementation project(':unityLibrary')
+    implementation 'com.android.support:multidex:1.0.3'
     }
 
 android {
@@ -15,6 +47,13 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+configurations.all {
+        resolutionStrategy {
+            force 'androidx.core:core:1.2.0'
+            force 'androidx.media:media:1.0.1'
+        }
+    }
+
     defaultConfig {
         minSdkVersion **MINSDKVERSION**
         targetSdkVersion **TARGETSDKVERSION**
@@ -24,6 +63,7 @@ android {
         }
         versionCode **VERSIONCODE**
         versionName '**VERSIONNAME**'
+        multiDexEnabled true
     }
 
     aaptOptions {
