@@ -49,8 +49,11 @@ public class BallHolder : MonoBehaviour
         if (leftBallScript != null)
         {
             ballsYValue = leftBallScript.transform.localPosition.y;
-            jumpPower = ballsYValue - 1.95f;
+            jumpPower = ballsYValue + 1f;// was -1.95f
         }
-       
+        if(ballsYValue > ogJumpPower)
+        {
+            jumpPower = ogJumpPower;
+        }
     }
 }
