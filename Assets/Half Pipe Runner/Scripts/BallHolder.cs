@@ -18,11 +18,13 @@ public class BallHolder : MonoBehaviour
     public bool snapping = false;
     public int numOfJumps = 0;
     private float ballsYValue;
+    private float rightBallsXValue;
+    private float leftBallsXValue;
 
     public GameObject confettiFX;
     public GameObject confettiFX2;
-    
-    
+    [SerializeField] private Animator leftBallAnimator;
+    [SerializeField] private Animator rightBallAnimator;
 
     private void Start()
     {
@@ -42,6 +44,7 @@ public class BallHolder : MonoBehaviour
             bothFinished = false;
         }
         UpdateJumpPower();
+        UpdateBallAnimator();
     }
 
     private void UpdateJumpPower()
@@ -55,5 +58,32 @@ public class BallHolder : MonoBehaviour
         {
             jumpPower = ogJumpPower;
         }
+    }
+    private void UpdateBallAnimator()
+    {
+        rightBallsXValue = rightBallScript.transform.localPosition.x;
+        leftBallsXValue = leftBallScript.transform.localPosition.x;
+        leftBallAnimator.SetFloat("Yvalue", ballsYValue);
+        leftBallAnimator.SetFloat("Xvalue", leftBallsXValue);
+        rightBallAnimator.SetFloat("Yvalue", ballsYValue);
+        rightBallAnimator.SetFloat("Xvalue", rightBallsXValue);
+        if (rightBallsXValue > 0)
+        {
+            rightBallAnimator.SetBool("OnLeftSide", false);
+        }
+        if (rightBallsXValue < 0)
+        {
+            rightBallAnimator.SetBool("OnLeftSide", true);
+        }
+        if(leftBallsXValue > 0)
+        {
+            leftBallAnimator.SetBool("OnLeftSide", false);
+        }
+        if (leftBallsXValue < 0)
+        {
+            leftBallAnimator.SetBool("OnLeftSide", true);
+        }
+       
+        
     }
 }
