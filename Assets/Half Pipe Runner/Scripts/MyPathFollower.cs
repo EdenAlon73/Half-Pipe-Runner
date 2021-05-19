@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using PathCreation;
 
 namespace PathCreation.Examples
@@ -12,8 +13,10 @@ namespace PathCreation.Examples
         public EndOfPathInstruction endOfPathInstruction;
         public float speed = 5;
         float distanceTravelled;
+        [SerializeField] private bool finishedPath;
 
-        void Start() {
+        void Start()
+        {
             if (pathCreator != null)
             {
                 // Subscribed to the pathUpdated event so that we're notified if the path changes during the game
@@ -23,23 +26,42 @@ namespace PathCreation.Examples
 
         void Update()
         {
-            if (pathCreator != null)
+            StartPath();
+            GoToNextPath();
+            print(finishedPath);
+        }
+        
+        void OnPathChanged() 
+        {
+            distanceTravelled = pathCreator[currentPathIndex].path.GetClosestDistanceAlongPath(transform.position);
+        }
+
+        private void StartPath()
+        {
+            if (pathCreator != null && !finishedPath)
             {
+                //finishedPath = false;
                 distanceTravelled += speed * Time.deltaTime;
                 transform.position = pathCreator[currentPathIndex].path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
                 transform.rotation = pathCreator[currentPathIndex].path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
+                
                 if (transform.position == pathCreator[currentPathIndex].path.GetPoint(1))
                 {
-                    currentPathIndex++;
-                    distanceTravelled = 0;
+                    finishedPath = true;
                 }
+                
             }
         }
-
-        // If the path changes during the game, update the distance travelled so that the follower's position on the new path
-        // is as close as possible to its position on the old path
-        void OnPathChanged() {
-            distanceTravelled = pathCreator[currentPathIndex].path.GetClosestDistanceAlongPath(transform.position);
+        private void GoToNextPath()
+        {
+            if (finishedPath)
+            {
+                currentPathIndex++;
+                distanceTravelled = 0;
+                finishedPath = false;
+            }
         }
     }
+    
+    
 }
