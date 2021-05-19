@@ -30,16 +30,17 @@ public class ScoreCalculation : MonoBehaviour
     [SerializeField] private Transform scoreSpwanPoint;
     [SerializeField] private GameObject scoreTxt;
     [SerializeField] private Canvas canvas;
-    private Animator anim;
+    //private Animator anim;
     [SerializeField] private ParticleSystem ballsTouchingFX;
-    
-    
+  
+
+
     private void Start()
     {
         myGameSession = FindObjectOfType<GameSession>();
         //myAudioSource = GetComponent<AudioSource>();
         gameManager = FindObjectOfType<GameManager>();
-        anim = GetComponent<Animator>();
+        //anim = GetComponent<Animator>();
     }
 
     /*
@@ -78,6 +79,7 @@ public class ScoreCalculation : MonoBehaviour
             gameManager.AddToScore();
             // Instantiate(scoreTxt, scoreSpwanPoint.position, Quaternion.identity, canvas.transform);   For little points jumping near balls
             ballsTouchingFX.Play();
+            
         }
     }
 }
