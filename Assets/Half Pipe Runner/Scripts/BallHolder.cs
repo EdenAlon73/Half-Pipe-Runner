@@ -25,7 +25,7 @@ public class BallHolder : MonoBehaviour
     public GameObject confettiFX2;
     [SerializeField] private Animator leftBallAnimator;
     [SerializeField] private Animator rightBallAnimator;
-
+    [SerializeField] private bool needsAnimator = false;
     private void Start()
     {
         leftBallScript = GetComponentInChildren<LeftBall>();
@@ -44,7 +44,10 @@ public class BallHolder : MonoBehaviour
             bothFinished = false;
         }
         UpdateJumpPower();
-        UpdateBallAnimator();
+        if (needsAnimator)
+        {
+            UpdateBallAnimator();
+        }
     }
 
     private void UpdateJumpPower()
@@ -61,6 +64,7 @@ public class BallHolder : MonoBehaviour
     }
     private void UpdateBallAnimator()
     {
+        
         rightBallsXValue = rightBallScript.transform.localPosition.x;
         leftBallsXValue = leftBallScript.transform.localPosition.x;
         leftBallAnimator.SetFloat("Yvalue", ballsYValue);
