@@ -6,6 +6,9 @@ public class CameraChanger : MonoBehaviour
 {
     public GameObject[] cameraList;
     private int currentCamera;
+    [SerializeField] private float gameTime;
+    [SerializeField] private float timeForCameraSwitch;
+    private bool stopCount = false;
     void Start()
     {
         currentCamera = 0;
@@ -25,6 +28,10 @@ public class CameraChanger : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.C))
         {
             SwitchCamera();
+        }
+        if (!stopCount)
+        {
+            CalculateGameTime();
         }
     }
     public void SwitchCamera()
@@ -47,5 +54,15 @@ public class CameraChanger : MonoBehaviour
     {
         cameraList[0].gameObject.SetActive(false);
         cameraList[1].gameObject.SetActive(true);
+    }
+
+    private void CalculateGameTime()
+    {
+        gameTime += Time.deltaTime;
+        if(gameTime >= timeForCameraSwitch)
+        {
+            stopCount = true;
+            SwitchCamera();
+        }
     }
 }
