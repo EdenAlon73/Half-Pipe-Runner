@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Green Hair
+  m_Name: Hair_Orange
   m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
   m_ShaderKeywords: _EMISSION _NORMALMAP _OCCLUSIONMAP
   m_LightmapFlags: 2
@@ -34,7 +34,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: a6b25f6d49029ed41874fa36c2548e44, type: 3}
+        m_Texture: {fileID: 2800000, guid: eaac55cbfa4c4ad4dbfad5e8e053f87d, type: 3}
         m_Scale: {x: 1, y: 0}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -46,7 +46,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: a6b25f6d49029ed41874fa36c2548e44, type: 3}
+        m_Texture: {fileID: 2800000, guid: eaac55cbfa4c4ad4dbfad5e8e053f87d, type: 3}
         m_Scale: {x: 1, y: 0}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -90,9 +90,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.56078434, g: 1, b: 0.52156866, a: 1}
+    - _BaseColor: {r: 0.9960785, g: 0.5137255, b: 0.003921569, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 0.27450982, g: 1, b: 0.23529412, a: 1}
+    - _EmissionColor: {r: 0.9911022, g: 0.22696589, b: 0.000303527, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _UvOffset: {r: 0, g: 0, b: 0, a: 0}
     - _UvTiling: {r: 1, g: 1, b: 0, a: 0}
