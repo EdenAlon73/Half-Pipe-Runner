@@ -6,30 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/Scene_Start Menu Prototype.unity
-    guid: a135036f018fae642aa68acec32b1dc7
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/00Scene_Level 1.unity
-    guid: 4230418db010b134581455fea3155ad1
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/01Scene_Level 2.unity
-    guid: edeb87fa8e5ad56448258c70537d2ea2
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/02Scene_Level 3.unity
-    guid: fdd95eb9d2b66bf4d818085696aaa9c6
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/03Scene_Level 4.unity
-    guid: 73b8363fa304e2d4fb04099be8761768
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/04Scene_Level 5.unity
-    guid: a028b87f012c81e42bda6bdded4e012a
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/05Scene_Level 6.unity
-    guid: 70e8139a6c6760649ba8f228274d4ad3
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/06Scene_Level 7.unity
-    guid: 278cce2fcd43ec346b3401e0d7336e24
-  - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/07Scene_Level 8.unity
-    guid: 482c8d0473fc7f644809e0e8df4be64b
+    path: Assets/Half Pipe Runner/Scenes/City Scenes/06CityScene_Level 8.unity
+    guid: f11fcca3526253a4d82262cb4a212aaa
   m_configObjects: {}
