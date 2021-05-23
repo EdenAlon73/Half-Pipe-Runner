@@ -6,9 +6,11 @@ public class CameraChanger : MonoBehaviour
 {
     public GameObject[] cameraList;
     private int currentCamera;
-    [SerializeField] private float gameTime;
+    private float gameTime;
     [SerializeField] private float timeForCameraSwitch;
+    [SerializeField] private float timeForHair = 2f;
     private bool stopCount = false;
+    [SerializeField] private GameObject hairCylinder;
     void Start()
     {
         currentCamera = 0;
@@ -61,8 +63,18 @@ public class CameraChanger : MonoBehaviour
         gameTime += Time.deltaTime;
         if(gameTime >= timeForCameraSwitch)
         {
-            stopCount = true;
             SwitchCamera();
         }
+        
+        
+        if (gameTime >= timeForHair)
+        {
+           stopCount = true;
+            if (hairCylinder != null)
+            {
+              hairCylinder.SetActive(false);
+            }
+        }
+        
     }
 }
