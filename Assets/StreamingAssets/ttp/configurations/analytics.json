@@ -1,12 +1,12 @@
 {
-  "included": true,
+  "included": false,
   "firebase": {
-    "googleAppId": "1:476820288095:android:993c6033608ff5a224a1ea",
-    "apiKey": "AIzaSyCyIAUhkmG6WuHzy5LZItObwGGSfEPUJx0",
-    "projectId": "cl-half-pipe-runner",
-    "clientId": "476820288095-nkjgadlorsagvj6s8gk7hgeqsglf3pbo.apps.googleusercontent.com",
-    "senderId": "476820288095",
-    "storageBucket": "cl-half-pipe-runner.appspot.com",
+    "googleAppId": "",
+    "apiKey": "",
+    "projectId": "",
+    "clientId": "",
+    "senderId": "",
+    "storageBucket": "",
     "databaseURL": ""
   }
 }

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: ttpIncludedServices
   m_EditorClassIdentifier: 
   appsFlyer: 1
-  analytics: 1
+  analytics: 0
   banners: 0
   interstitials: 0
   rvs: 0
-  crashTool: 1
+  crashTool: 0
   privacySettings: 0
   rateUs: 0
   openAds: 0
