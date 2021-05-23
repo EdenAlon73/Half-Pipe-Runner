@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Half Pipe Runner/Scenes/City Scenes/06CityScene_Level 8.unity
+    path: Assets/Half Pipe Runner/Scenes/City Scenes/06CityScene_Level 7.unity
     guid: f11fcca3526253a4d82262cb4a212aaa
   m_configObjects: {}
